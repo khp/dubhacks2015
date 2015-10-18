@@ -3,7 +3,19 @@ body {
 }
 
 .button {
+	background-color: #666;
+	border-radius: 6px;
+	border: 0;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	height: 3em;
+	line-height: 3em;
 	padding: 0 1em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 #upload {
