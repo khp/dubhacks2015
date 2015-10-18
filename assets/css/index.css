@@ -1,5 +1,13 @@
+body {
+	background-image: url("images/Banner.jpg");
+}
+
 .button {
-	padding: 0;
+	padding: 0 1em;
+}
+
+#upload {
+
 }
 
 img {
