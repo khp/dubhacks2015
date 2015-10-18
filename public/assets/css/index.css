@@ -3,56 +3,48 @@
 	padding: 2em;
 }
 
-#banner {
-	background-color: #669999;
+#info {
+	width: 70%;
+	height: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../../images/greenopaque.png");
+	overflow: hidden;
 }
 
-.submit {
-	margin-top: 1em; 
-	margin-bottom: 1em;
+#submitButton {
+	border-radius: 10px;
+	display: inline;
+	text-align: center;
 }
 
-.button {
+#button {
 	display: inline;
 }
 
 header {
 	text-align: center;
-	background-color: #0f9571;
+	background-color: #0f9580 ;
 	padding-top: 20px;
 	padding-bottom: 15px;
 }
 
 footer {
-	background-color:#0f9571;
+	background-color:#0f9580;
 	height: 100px;
 }
 
-.icon {
-	margin: 15px;
-	height: 7em;
-	float: left;
+#results img{
+	margin:auto;
 }
 
-#mainImg {
-	height: 100%;
-}
-
-#searchedImg {
-	text-align: center;
-	height: 10em;
-}
-
-.results img{
-	margin: auto;
-}
-
-.results {
+#results {
 	padding: 20px;
 }
 
-.area {
+#area {
 	width: 200px;
+	border: 2px solid black;
 }
 .button {
 	background-color: #666;
@@ -70,9 +62,20 @@ footer {
 	white-space: nowrap;
 }
 
-.uploadButton {
-	margin-right: 5%;
-	margin-bottom: 3em;
+#urlText {
+	border-radius: 6px;
+	margin-bottom: 5%;
+	width: 75%;
+}
+
+#uploadButton {
+	padding-left: 20%;
+	margin-bottom: 1em;
+}
+
+#camera {
+	float: right;
+	margin-right: 25%;
 }
 
 img {
