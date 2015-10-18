@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return urlSuffix;
           }      
     }
-      
+    
     document.getElementById('submitButton').addEventListener('click', function() {
       var textInput = $('#urlText').value;
       var urlSuffix = '?';
@@ -103,6 +103,15 @@ document.addEventListener('DOMContentLoaded', function() {
         readURLfromText(textInput, urlSuffix);
       }
       window.open('results'+urlSuffix,'_self',false);
+    });
+
+    $('#urlText').keypress(function (e) {
+     var key = e.which;
+     if (key == 13) 
+      {
+        $('#submitButton').click();
+        return false;  
+      }
     });
 
     function readURLfromText(input, urlSuffix) {
@@ -123,5 +132,9 @@ document.addEventListener('DOMContentLoaded', function() {
             window.open('results'+urlSuffix,'_self',false);
           });
       return urlSuffix;
+  }
+
+  function checkURL(url) {
+    return(url.match(/\.(jpeg|jpg|gif|png)$/) != null);
   }
 });

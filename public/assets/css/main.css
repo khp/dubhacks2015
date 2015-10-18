@@ -2689,12 +2689,12 @@
 		background-attachment:fixed;
 		background-color: #666;
 		background-image: url("images/overlay.png"), url("../../images/banner.jpg");
-		background-position: top left,						center center;
-		background-repeat: repeat,							no-repeat;
-		background-size: auto,							cover;
+		background-position: top left, center center;
+		background-repeat: no-repeat, repeat;
 		color: #fff;
 		padding: 4em 0 20em 0;
 		text-align: center;
+		background-size: 100%;
 	}
 
 		#banner :last-child {

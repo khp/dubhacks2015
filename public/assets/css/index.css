@@ -19,7 +19,7 @@
 	height: 250px;
 }
 
-#submitButton {
+#submitButton, #nearbySearch {
 	display: inline;
 	text-align: center;
 	border-radius: 10px;
@@ -73,11 +73,13 @@ footer {
 	border-radius: 6px;
 	margin-bottom: 5%;
 	width: 75%;
+	padding-left: 10px;
 }
 
 #uploadButton {
-	padding-left: 20%;
+	padding-left: 10%;
 	margin-bottom: 1em;
+	font-size: 15px;
 }
 
 #camera {
@@ -85,8 +87,13 @@ footer {
 	margin-right: 35%;
 }
 
-img {
-	max-height: 2em;
+.col-md-4 img {
+	height: 8em;
+}
+
+#mainImg {
+	height: 2em;
+	margin: 10px;
 }
 
 #banner2 {
