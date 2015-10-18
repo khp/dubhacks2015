@@ -42,7 +42,7 @@ $(':button').click(function(){
 var formData = new FormData($('form')[0]);
 console.log(formData);
 var imgData = JSON.stringify(getBase64Image(imgElem));
-var reader = new FileReader();
+
 
 init();
 clarifai.getTaggings(formData);
@@ -76,3 +76,33 @@ function init(){
         }
     );
 }
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+           
+        reader.onload = function (e) {
+        	var data = { 'encoded_data': e.target.result.substring(22) };
+		    $.ajax(
+		        {
+		            'type': 'POST',
+		            'contentType': 'application/json; charset=utf-8',
+		            'processData': false,
+		            'data': JSON.stringify(data),
+		            'url': 'https://api.clarifai.com/v1/tag/',
+		            'headers': {
+		                'Authorization': 'Bearer ' + 'osEcIaBYtBBzDjz6Vg4xW2oIsTDt0r'
+		            }
+		        }).done(function(res) {
+		        	console.log(res);
+		        })
+		}  
+            reader.readAsDataURL(input.files[0]);
+            }
+            
+        }
+    
+    
+    $("#asd").change(function(){
+        readURL(this);
+    });
