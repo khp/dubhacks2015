@@ -457,3 +457,36 @@ else{
     clarifai.predict('http://example.com/some-new-image.jpg', 'car', callback);
     
 */
+
+Clarifai.prototype.getTaggings = function(img){
+   var response;
+    $.ajax(
+        {
+            'type': 'POST',
+            'contentType': 'application/json; charset=utf-8',
+            'processData': false,
+            'data': JSON.stringify(img),
+            'url': 'https://api.clarifai.com/v1/tag/',
+            'headers': {
+                'Authorization': 'Bearer ' + 'cM1w6oMlkNbgid8gOCFv0i8aapbbtW'
+            }
+        }  
+    ).then(
+        function(json){
+            if(json.status.status === "OK"){
+                console.log(json);
+            }
+            if(json.status.status === 'ERROR'){
+                console.log(json);
+            }
+        }.bind(this),
+        function(e){
+            this.log("Clarifai failed", e);
+            var result = {
+                'success': false
+            }
+            deferred.reject(result);
+            callback.call(this, result);
+        }.bind(this)
+    );
+}

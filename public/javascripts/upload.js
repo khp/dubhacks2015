@@ -1,7 +1,5 @@
 // $(':button').click(function(){
 //     var formData = new FormData($('form')[0]);
-//     console.log(formData);
-//     console.log("here");
 //     $.ajax({
 //         url: '/search',  //Server script to process data
 //         type: 'POST',
@@ -34,23 +32,29 @@
 // function completeHandler() {
 
 // }
-
+var clarifai;
 var imgElem = document.getElementById('img');
 $('#urlText').keyup(function(){
    $('#img').attr('src',$('#urlText').val());
 });
    
 $(':button').click(function(){
+var formData = new FormData($('form')[0]);
+console.log(formData);
 var imgData = JSON.stringify(getBase64Image(imgElem));
-  $.ajax({
-  url: '/search',
-  dataType: 'json',
-  data: imgData,
-  type: 'POST',
-  success: function(data) {
-    console.log(data);
-    }
-  });
+
+
+init();
+clarifai.getTaggings(formData);
+  // $.ajax({
+  // url: '/search',
+  // dataType: 'json',
+  // data: imgData,
+  // type: 'POST',
+  // success: function(data) {
+  //   console.log(data);
+  //   }
+  // });
 });
 
 function getBase64Image(imgElem) {
@@ -63,3 +67,42 @@ function getBase64Image(imgElem) {
     var dataURL = canvas.toDataURL("image/png");
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
 }
+
+function init(){
+    clarifai = new Clarifai(
+        {
+            'clientId': 'HM0gxfG9Cu4UyMS_c2HrieEUasbfF-VMr0WajYt-',
+            'clientSecret': 'bzF3jssSAxDodvkEWK0VH3JMVE-q-Z59XCBzsyOM'
+        }
+    );
+}
+
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+           
+        reader.onload = function (e) {
+        	var data = { 'encoded_data': e.target.result.substring(22) };
+		    $.ajax(
+		        {
+		            'type': 'POST',
+		            'contentType': 'application/json; charset=utf-8',
+		            'processData': false,
+		            'data': JSON.stringify(data),
+		            'url': 'https://api.clarifai.com/v1/tag/',
+		            'headers': {
+		                'Authorization': 'Bearer ' + 'osEcIaBYtBBzDjz6Vg4xW2oIsTDt0r'
+		            }
+		        }).done(function(res) {
+		        	console.log(res);
+		        })
+		}  
+            reader.readAsDataURL(input.files[0]);
+            }
+            
+        }
+    
+    
+    $("#asd").change(function(){
+        readURL(this);
+    });
