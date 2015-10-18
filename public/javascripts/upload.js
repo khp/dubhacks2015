@@ -38,24 +38,14 @@ $('#urlText').keyup(function(){
    $('#img').attr('src',$('#urlText').val());
 });
    
-$(':button').click(function(){
-var formData = new FormData($('form')[0]);
-console.log(formData);
-var imgData = JSON.stringify(getBase64Image(imgElem));
+// $(':button').click(function(){
+// var formData = new FormData($('form')[0]);
+// // var imgData = JSON.stringify(getBase64Image(imgElem));
 
 
-init();
-clarifai.getTaggings(formData);
-  // $.ajax({
-  // url: '/search',
-  // dataType: 'json',
-  // data: imgData,
-  // type: 'POST',
-  // success: function(data) {
-  //   console.log(data);
-  //   }
-  // });
-});
+// init();
+// clarifai.getTaggings(formData);
+// });
 
 function getBase64Image(imgElem) {
 // imgElem must be on the same server otherwise a cross-origin error will be thrown "SECURITY_ERR: DOM Exception 18"
@@ -96,21 +86,58 @@ function init(){
 		        }).done(function(res) {
 		        	console.log(res);
 		        	var toSend = [];
-		        	var urlSuffix = "?";
-		        	for (var i = 0; i < 2 && i < res.results[0].result.tag.classes.length; i++) {
-		        		urlSuffix += "res"+i+"="+res.results[0].result.tag.classes[i] + "&";
-		        	}
-		        	console.log(urlSuffix);
-		        	res.results[0].result.tag.classes
-		        	window.open ('results'+urlSuffix,'_self',false)
+  		        	var urlSuffix = "?";
+  		        	for (var i = 0; i < 2 && i < res.results[0].result.tag.classes.length; i++) {
+  		        		urlSuffix += "res"+i+"="+res.results[0].result.tag.classes[i] + "&";
+  		        	}
+  		        	console.log(urlSuffix);
+  		        	res.results[0].result.tag.classes
+                $("#submitButton").click(function() {
+		        	   window.open ('results'+urlSuffix,'_self',false);
+               });
 		        })
 			}  
+      console.log(input);
             reader.readAsDataURL(input.files[0]);
         }
             
     }
-    
+    $('#urlText').keypress(function (e) {
+    if (e.which == '13') {
+      console.log($('#urlText')[0].value);
+        readURLfromText($('#urlText')[0].value);
+    }
+});
     
     $("#uploadButton").change(function(){
-        readURL(this);
+      console.log($("#img")[0]);
+      console.log(this);
+      readURL(this);
     });
+
+    function readURLfromText(input) {
+      if (input.length > 5) {
+         
+
+        $.ajax(
+            {
+                'type': 'GET',
+                'url': 'https://api.clarifai.com/v1/tag/?url='+input,
+                'headers': {
+                    'Authorization': 'Bearer ' + 'osEcIaBYtBBzDjz6Vg4xW2oIsTDt0r'
+                }
+            }).done(function(res) {
+              console.log(res);
+              var toSend = [];
+                var urlSuffix = "?";
+                for (var i = 0; i < 2 && i < res.results[0].result.tag.classes.length; i++) {
+                  urlSuffix += "res"+i+"="+res.results[0].result.tag.classes[i] + "&";
+                }
+                console.log(urlSuffix);
+                res.results[0].result.tag.classes
+                
+                 window.open ('results'+urlSuffix,'_self',false);
+            })
+      }  
+
+    }
