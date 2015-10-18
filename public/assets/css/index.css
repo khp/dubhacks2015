@@ -12,6 +12,13 @@
 	overflow: hidden;
 }
 
+#searchedImg {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 250px;
+}
+
 #submitButton {
 	border-radius: 10px;
 	display: inline;
@@ -69,8 +76,8 @@ footer {
 }
 
 #uploadButton {
-	padding-left: 20%;
-	margin-bottom: 1em;
+	margin: auto;
+	padding: 10px 0 10px 50px;
 }
 
 #camera {
@@ -79,9 +86,27 @@ footer {
 }
 
 img {
-	max-height: 2em;
+	height: 4em;
 }
 
 #banner2 {
 	max-height: 400px;
+}
+
+section p {
+	text-align: center;
+}
+
+section div img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#uploadButton, #submitButton {
+	border-radius: 15px;
+}
+
+.results {
+	text-align: center;
 }

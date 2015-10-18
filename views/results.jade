@@ -4,10 +4,9 @@ html.
 		<title>SnapShop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	</head>
 	<body class="landing">
 		<header>
@@ -15,17 +14,18 @@ html.
 		</header>
 		
 		<section class="results">
-			<strong>Your image:</strong><br />
+			<p><strong>Your image:</strong></p>
 			<img id="searchedImg" src="images/mainpanda.png" alt="red panda"/>
 			<form enctype="multipart/form-data">
-				<input type="file" name="upload" />
-				<button name="newTags" value="submit">Submit</button>
+				<input type="file" name="upload" id="uploadButton"/>
+				<button name="newTags" value="submit" id="submitButton">Submit</button>
 			</form>
 		</section>
+
 		<section class="results">
 			<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-xs-12 col-sm-3 col-md-4">
 				<!--Get images from clarifai-->
 					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
 					<p>
@@ -38,7 +38,7 @@ html.
 						Rating?
 					</p>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-xs-12 col-sm-3 col-md-4">
 				<!--Get images from clarifai-->
 					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
 					<p>
@@ -51,7 +51,7 @@ html.
 						Rating?
 					</p>
 				</div>
-				<div class="col-sm-4">
+				<div class="col-xs-12 col-sm-3 col-md-4">
 				<!--Get images from clarifai-->
 					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
 					<p>
@@ -66,87 +66,7 @@ html.
 					</div>
 				</div>
 
-				<div class="row">
-					<div class="col-sm-4">
-					<!--Get images from clarifai-->
-						<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-						<p>
-							<strong>Red Panda</strong>
-							<br />
-							<a href="redpanda.com">RedPanda.com</a>
-							<br />
-							<em>$$$$$Monies</em>
-							<br />
-							Rating?
-						</p>
-					</div>				<div class="col-sm-4">
-					<!--Get images from clarifai-->
-						<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-						<p>
-							<strong>Red Panda</strong>
-							<br />
-							<a href="redpanda.com">RedPanda.com</a>
-							<br />
-							<em>$$$$$Monies</em>
-							<br />
-							Rating?
-						</p>
-					</div>
-					<div class="col-sm-4">
-					<!--Get images from clarifai-->
-						<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-						<p>
-							<strong>Red Panda</strong>
-							<br />
-							<a href="redpanda.com">RedPanda.com</a>
-							<br />
-							<em>$$$$$Monies</em>
-							<br />
-							Rating?
-						</p>
-					</div>
-				</div>
-				<div class="row">
-				<div class="col-sm-4">
-				<!--Get images from clarifai-->
-					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-					<p>
-						<strong>Red Panda</strong>
-						<br />
-						<a href="redpanda.com">RedPanda.com</a>
-						<br />
-						<em>$$$$$Monies</em>
-						<br />
-						Rating?
-					</p>
-				</div>	
-				<div class="col-sm-4">
-				<!--Get images from clarifai-->
-					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-					<p>
-						<strong>Red Panda</strong>
-						<br />
-						<a href="redpanda.com">RedPanda.com</a>
-						<br />
-						<em>$$$$$Monies</em>
-						<br />
-						Rating?
-					</p>
-				</div>
-				<div class="col-sm-4">
-				<!--Get images from clarifai-->
-					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-					<p>
-						<strong>Red Panda</strong>
-						<br />
-						<a href="redpanda.com">RedPanda.com</a>
-						<br />
-						<em>$$$$$Monies</em>
-						<br />
-						Rating?
-					</p>
-					</div>
-				</div>
+				
 			</div>
 
 		</section>
