@@ -95,12 +95,20 @@ function init(){
 		            }
 		        }).done(function(res) {
 		        	console.log(res);
+		        	var toSend = [];
+		        	var urlSuffix = "?";
+		        	for (var i = 0; i < 2 && i < res.results[0].result.tag.classes.length; i++) {
+		        		urlSuffix += "res"+i+"="+res.results[0].result.tag.classes[i] + "&";
+		        	}
+		        	console.log(urlSuffix);
+		        	res.results[0].result.tag.classes
+		        	window.open ('results'+urlSuffix,'_self',false)
 		        })
-		}  
+			}  
             reader.readAsDataURL(input.files[0]);
-            }
-            
         }
+            
+    }
     
     
     $("#asd").change(function(){

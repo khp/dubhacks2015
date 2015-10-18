@@ -17,6 +17,9 @@ router.get('/', function(req, res, next) {
 router.get('/index2', function(req, res, next) {
   res.render('index2');
 });
+router.get('/results', function(req, res, next) {
+  res.render('results');
+});
 router.post('/search', function(req, res, next) {
 	console.log(req.body);
   getTagging(req);
