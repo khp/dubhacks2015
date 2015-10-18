@@ -18,16 +18,18 @@ router.get('/index2', function(req, res, next) {
   res.render('index2');
 });
 router.get('/results', function(req, res, next) {
-client.itemSearch({ 
-	keywords: 'yoooo'
-}).then(function(results){
-	res.render('results', { result: results});
-  console.log(results);
-}).catch(function(err){
-  console.log(err.Error[0].Code);
- console.log(err.Error[0].Message);
-});
-  
+  client.itemSearch({ 
+  	keywords: 'Hello'
+  }).then(function(results){
+
+    console.log(results);
+  	res.render('results', [{ result: results[0] }]);
+    
+  }).catch(function(err){
+    console.log(err.Error[0].Code);
+   console.log(err.Error[0].Message);
+  });
+    // res.render('results');
 });
 router.post('/search', function(req, res, next) {
 console.log(req.body);

@@ -16,7 +16,7 @@ router.get('/index2', function(req, res, next) {
   res.render('index2');
 });
 router.post('/search', function(req, res, next) {
-	console.log(req.body);
+  console.log(req.body);
   getTagging(req);
   // clarifai.getTagging(req);
   res.render('index');
