@@ -1,26 +1,29 @@
 doctype html
 html.
 	<head>
-		<title>SnapShop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--<link rel="stylesheet" href="assets/css/main.css" />-->
 		<link rel="stylesheet" href="assets/css/index.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body class="landing">
-
+		<div id="page-wrapper">
 			<!-- Banner -->
-			<section id="banner">
-				<h2>SNAP SHOP</h2>
-				<p></p>
-				<ul class="actions">
-					<li><a href="#" class="button">Upload</a></li>
-					<img src="images/camera.png">
-				</ul>
-			</section>
+				<section id="banner" style="padding: 5em; height: 37em">
+					<h2>SNAP SHOT</h2>
+					<div class="container 75%" >
+						<div>		
+						<form enctype="multipart/form-data">
+							<input type="file" name="asd" place>
+							<input type="button" value="Upload">
+						</form>
+							<img src="images/camera.png" alt="camera" />
+						</div>
+					</div>
+				</section>
 
+		</div>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
@@ -30,6 +33,7 @@ html.
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script src="javascripts/upload.js"></script>
 
 	</body>
 </html>
