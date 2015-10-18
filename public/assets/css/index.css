@@ -14,12 +14,29 @@ footer {
 	height: 100px;
 }
 
+.icon {
+	margin: 15px;
+	height: 7em;
+}
+
+#mainImg {
+	height: 100%;
+}
+
+#searchedImg {
+	text-align: center;
+}
+.icon {
+	float: left;
+}
+
 .results img{
-	margin:auto;
+	margin: auto;
 }
 
 .results {
 	padding: 20px;
+	border: 2px black solid;
 }
 
 .area {
