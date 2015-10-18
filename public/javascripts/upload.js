@@ -1,7 +1,5 @@
 // $(':button').click(function(){
 //     var formData = new FormData($('form')[0]);
-//     console.log(formData);
-//     console.log("here");
 //     $.ajax({
 //         url: '/search',  //Server script to process data
 //         type: 'POST',
@@ -34,23 +32,29 @@
 // function completeHandler() {
 
 // }
-
+var clarifai;
 var imgElem = document.getElementById('img');
 $('#urlText').keyup(function(){
    $('#img').attr('src',$('#urlText').val());
 });
    
 $(':button').click(function(){
+var formData = new FormData($('form')[0]);
+console.log(formData);
 var imgData = JSON.stringify(getBase64Image(imgElem));
-  $.ajax({
-  url: '/search',
-  dataType: 'json',
-  data: imgData,
-  type: 'POST',
-  success: function(data) {
-    console.log(data);
-    }
-  });
+var reader = new FileReader();
+
+init();
+clarifai.getTaggings(formData);
+  // $.ajax({
+  // url: '/search',
+  // dataType: 'json',
+  // data: imgData,
+  // type: 'POST',
+  // success: function(data) {
+  //   console.log(data);
+  //   }
+  // });
 });
 
 function getBase64Image(imgElem) {
@@ -62,4 +66,13 @@ function getBase64Image(imgElem) {
     ctx.drawImage(imgElem, 0, 0);
     var dataURL = canvas.toDataURL("image/png");
     return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+}
+
+function init(){
+    clarifai = new Clarifai(
+        {
+            'clientId': 'HM0gxfG9Cu4UyMS_c2HrieEUasbfF-VMr0WajYt-',
+            'clientSecret': 'bzF3jssSAxDodvkEWK0VH3JMVE-q-Z59XCBzsyOM'
+        }
+    );
 }
