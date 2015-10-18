@@ -63,12 +63,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
       function readURL(input, urlSuffix) {
-          if (input.files && input.files[0]) {
+        console.log(input);
+          if (input[0].files && input[0].files[0]) {
               var reader = new FileReader();
              
             reader.onload = function (e) {
             	var data = { 'encoded_data': e.target.result.substring(22) };
-              var urlSuffix;
       		    $.ajax(
       		        {
     		            'type': 'POST',
@@ -82,27 +82,30 @@ document.addEventListener('DOMContentLoaded', function() {
                   }).done(function(res) {
       		        	console.log(res);
       		        	var toSend = [];
-        		        	for (var i = 0; i < 2 && i < res.results[0].result.tag.classes.length; i++) {
-        		        		urlSuffix += "res"+i+"="+res.results[0].result.tag.classes[i] + "&";
-        		        	}
-        		        	console.log(urlSuffix);
-        		        	res.results[0].result.tag.classes
+                    for (var i = 0; i < 5 && i < res.results[0].result.tag.classes.length; i++) {
+                      urlSuffix += "res"+i+"="+res.results[0].result.tag.classes[i] + "&";
+                    }
+      		        	console.log(urlSuffix);
+      		        	res.results[0].result.tag.classes
+                    window.open('results'+urlSuffix,'_self',false);
       		        });
+
   			    }
-            reader.readAsDataURL(input.files[0]);
+            reader.readAsDataURL(input[0].files[0]);
+            console.log(urlSuffix);
             return urlSuffix;
           }      
     }
     
     document.getElementById('submitButton').addEventListener('click', function() {
-      var textInput = $('#urlText').value;
+      var textInput = $('#urlText').val();
       var urlSuffix = '?';
       if (textInput == '') {
-        readUrl($('#uploadButton'), urlSuffix);
+        readURL($('#uploadButton'), urlSuffix);
       } else {
         readURLfromText(textInput, urlSuffix);
       }
-      window.open('results'+urlSuffix,'_self',false);
+      // window.open('results'+urlSuffix,'_self',false);
     });
 
     $('#urlText').keypress(function (e) {

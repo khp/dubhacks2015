@@ -18,12 +18,41 @@ router.get('/index2', function(req, res, next) {
   res.render('index2');
 });
 router.get('/results', function(req, res, next) {
-  res.render('results');
+  client.itemSearch({ 
+  	keywords: 'Hello'
+  }).then(function(results){
+
+    console.log(results);
+  	res.render('results', [{ result: results[0] }]);
+    
+  }).catch(function(err){
+    console.log(err.Error[0].Code);
+   console.log(err.Error[0].Message);
+  });
+    // res.render('results');
 });
 router.post('/search', function(req, res, next) {
-	console.log(req.body);
+console.log(req.body);
   getTagging(req);
   res.render('index');
 });
 
 module.exports = router;
+
+var amazon = require('amazon-product-api');
+
+var client = amazon.createClient({
+  awsId: "AKIAJBSNE3CE36TWT6YA",
+  awsSecret: "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"
+});
+
+function itemSearch(){
+client.itemSearch({ 
+	keywords: 'yoooo'
+}).then(function(results){
+  //console.log(results);
+}).catch(function(err){
+  //console.log(err.Error[0].Code);
+ // console.log(err.Error[0].Message);
+});
+}
