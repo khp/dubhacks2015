@@ -2,6 +2,23 @@ body {
 	background-image: url("images/banner.jpg");
 }
 
+#logo {
+	max-height: 2em;
+}
+
+#banner {
+	background-color: #669999;
+}
+
+.submit {
+	margin-top: 1em; 
+	margin-bottom: 1em;
+}
+
+.button {
+	display: inline;
+}
+
 header {
 	text-align: center;
 	background-color: #0f9580 ;
