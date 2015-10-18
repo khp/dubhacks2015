@@ -2,6 +2,30 @@ body {
 	background-image: url("images/Banner.jpg");
 }
 
+header {
+	text-align: center;
+	background-color: #0f9580 ;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+footer {
+	background-color:#0f9580;
+	height: 100px;
+}
+
+.results img{
+	margin:auto;
+}
+
+.results {
+	padding: 20px;
+}
+
+.area {
+	width: 200px;
+	border: 2px solid black;
+}
 .button {
 	padding: 0 1em;
 }
@@ -12,4 +36,8 @@ body {
 
 img {
 	height: 4em;
+}
+
+#banner2 {
+	max-height: 400px;
 }
