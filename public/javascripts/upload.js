@@ -111,6 +111,6 @@ function init(){
     }
     
     
-    $("#asd").change(function(){
+    $("#uploadButton").change(function(){
         readURL(this);
     });
