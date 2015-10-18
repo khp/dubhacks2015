@@ -1,0 +1,27 @@
+{
+	"result": [{
+		"name": "Afterglow Wired Conroller for XBox 360 - Blue",
+		"company": "PDP",
+		"price": "24.95",
+		"imageurl": "http://ecx.images-amazon.com/images/I/51qV0pNiVsL.jpg",
+		"url": "http://www.amazon.com/gp/product/B00EZKNT18?keywords=x-box%20controller&qid=1445209601&ref_=sr_1_4&sr=8-4"
+	},{
+		"name": "Xbox 360 Wireless Controller - Glossy Black",
+		"company": "Microsoft",
+		"price": "32.49",
+		"imageurl": "http://ecx.images-amazon.com/images/I/81k6iDsoqrL._SL1500_.jpg",
+		"url": "http://www.amazon.com/gp/product/B003ZSP0WW?keywords=x-box%20controller&qid=1445209601&ref_=sr_1_1&sr=8-1"
+	},{
+		"name": "Xbox 360 Wireless Controller - Camouflage",
+		"company": "Microsoft",
+		"price": "39.96",
+		"imageurl": "http://ecx.images-amazon.com/images/I/71V-irTKxcL._SL1500_.jpg",
+		"url": "http://www.amazon.com/gp/product/B00CXTX2YW?keywords=x-box%20controller&qid=1445209601&ref_=sr_1_3&sr=8-3"
+	},{
+		"name": "Xbox One Wireless Controller (Without 3.5 millimeter headset jack)",
+		"company": "Microsoft",
+		"price": "52.49",
+		"imageurl": "http://ecx.images-amazon.com/images/I/51g%2BnwQxi7L._SL1000_.jpg"
+	}
+	]
+}

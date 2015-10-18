@@ -9,7 +9,6 @@ var collectionId = 'default';
 var accessToken = 'zRigm7MryebDi9RUlpknO8nCmjNBvW';
 var nameSpace = 'default';
 var collectionId = 'default';
-
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index');
@@ -23,7 +22,7 @@ router.get('/results', function(req, res, next) {
   }).then(function(results){
 
     console.log(results);
-  	res.render('results', [{ result: results[0] }]);
+  	res.render('results', {result: results});
     
   }).catch(function(err){
     console.log(err.Error[0].Code);

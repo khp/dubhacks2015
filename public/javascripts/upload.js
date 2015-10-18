@@ -33,7 +33,6 @@
 
 // }
 document.addEventListener('DOMContentLoaded', function() {
-
   var clarifai;
   var imgElem = document.getElementById('img');
   $('#urlText').keyup(function(){
