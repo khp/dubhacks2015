@@ -13,12 +13,13 @@ html.
 					<div id="info">
 						<img src="images/snapshop.png" alt="Snap Shop" id="logo"/><br>
 						<div class="container 75%" >
-							<div>		
-								<input id="urlText" placeholder="  Enter Url..." id="urlInput"/>
-								<form enctype="multipart/form-data">
-									<input type="file" id="uploadButton" name="asd">
-									<img src="images/camera.png" alt="camera" id="camera"/><br>
-									<input type="button" id="submitButton" value="Submit" href="../results.html" style="margin-bottom: 2em;">
+							<div>
+								<form>
+									<input id="urlText" placeholder="  Enter Url..." id="urlInput"/>
+									<input type="file" accept="image/*; capture=camera" id="uploadButton"/>
+									<br/>
+									<input type="button" id="submitButton" value="Online Search" href="../results.html" style="margin-bottom: 2em;"/>
+
 								</form>
 							</div>
 						</div>
@@ -27,16 +28,14 @@ html.
 
 		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-			<script src="javascripts/upload.js"></script>
-			<script src="javascripts/clarifai.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollgress.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+		<script src="javascripts/upload.js"></script>
+		<script src="javascripts/clarifai.js"></script>
 
 	</body>
 </html>
