@@ -1,22 +1,17 @@
-body {
-	background-image: url("../../images/banner.jpg");
-}
-
 #logo {
 	max-height: 2em;
 	padding: 2em;
 }
 
-#banner {
-	background-color: #669999;
+#info {
+	width: 75%;
+	height: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	background-image: url("../../images/greenbackground.png");
 }
 
-.submit {
-	margin-top: 1em; 
-	margin-bottom: 1em;
-}
-
-.button {
+#button {
 	display: inline;
 }
 
@@ -32,15 +27,15 @@ footer {
 	height: 100px;
 }
 
-.results img{
+#results img{
 	margin:auto;
 }
 
-.results {
+#results {
 	padding: 20px;
 }
 
-.area {
+#area {
 	width: 200px;
 	border: 2px solid black;
 }
@@ -60,9 +55,17 @@ footer {
 	white-space: nowrap;
 }
 
-.uploadButton {
-	margin-right: 5%;
-	margin-bottom: 3em;
+#urlText {
+	border-radius: 6px;
+}
+
+#uploadButton {
+	float: left;
+	padding-left: 10%;
+}
+
+#camera {
+	margin-left: 0;
 }
 
 img {
