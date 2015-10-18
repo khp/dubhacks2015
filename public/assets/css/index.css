@@ -113,3 +113,9 @@ section div img {
 .results {
 	text-align: center;
 }
+
+.error {
+	color: black;
+	font-size: 14px !important;
+	font-weight: 800;
+}
