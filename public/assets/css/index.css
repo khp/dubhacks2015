@@ -2,8 +2,61 @@ body {
 	background-image: url("../../images/banner.jpg");
 }
 
+#logo {
+	max-height: 2em;
+}
+
+#banner {
+	background-color: #669999;
+}
+
+.submit {
+	margin-top: 1em; 
+	margin-bottom: 1em;
+}
+
 .button {
+	display: inline;
+}
+
+header {
+	text-align: center;
+	background-color: #0f9580 ;
+	padding-top: 20px;
+	padding-bottom: 15px;
+}
+
+footer {
+	background-color:#0f9580;
+	height: 100px;
+}
+
+.results img{
+	margin:auto;
+}
+
+.results {
+	padding: 20px;
+}
+
+.area {
+	width: 200px;
+	border: 2px solid black;
+}
+.button {
+	background-color: #666;
+	border-radius: 6px;
+	border: 0;
+	color: #ffffff;
+	cursor: pointer;
+	display: inline-block;
+	font-weight: 400;
+	height: 3em;
+	line-height: 3em;
 	padding: 0 1em;
+	text-align: center;
+	text-decoration: none;
+	white-space: nowrap;
 }
 
 #upload {
@@ -12,4 +65,8 @@ body {
 
 img {
 	height: 4em;
+}
+
+#banner2 {
+	max-height: 400px;
 }
