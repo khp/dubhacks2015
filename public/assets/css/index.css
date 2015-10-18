@@ -22,6 +22,7 @@
 #submitButton {
 	display: inline;
 	text-align: center;
+	border-radius: 10px;
 }
 
 #button {
@@ -75,17 +76,17 @@ footer {
 }
 
 #uploadButton {
-	margin: auto;
-	padding: 10px 0 10px 50px;
+	padding-left: 20%;
+	margin-bottom: 1em;
 }
 
 #camera {
 	float: right;
-	margin-right: 25%;
+	margin-right: 35%;
 }
 
 img {
-	height: 4em;
+	max-height: 2em;
 }
 
 #banner2 {
