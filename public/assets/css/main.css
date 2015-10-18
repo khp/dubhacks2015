@@ -2400,7 +2400,7 @@
 
 /* List */
 
-	ol {
+/*	ol {
 		list-style: decimal;
 		margin: 0 0 2em 0;
 		padding-left: 1.25em;
@@ -2466,7 +2466,6 @@
 
 			ul.actions li {
 				display: inline-block;
-				padding: 0 1em 0 0;
 				vertical-align: middle;
 			}
 
@@ -2480,7 +2479,6 @@
 
 			ul.actions.vertical li {
 				display: block;
-				padding: 1em 0 0 0;
 			}
 
 				ul.actions.vertical li:first-child {
@@ -2527,7 +2525,7 @@
 
 	dl {
 		margin: 0 0 2em 0;
-	}
+	}*/
 
 /* Table */
 
@@ -3234,17 +3232,17 @@
 
 /* Wide */
 
-	@media screen and (max-width: 1680px) {
+/*	@media screen and (max-width: 1680px) {
 
 		/* Basic */
 
-			body, input, select, textarea {
+/*			body, input, select, textarea {
 				font-size: 13pt;
 			}
 
 		/* Banner */
 
-			#banner {
+/*			#banner {
 				padding: 10em 0 18em 0;
 			}
 
@@ -3252,17 +3250,17 @@
 
 /* Normal */
 
-	@media screen and (max-width: 1280px) {
+/*	@media screen and (max-width: 1280px) {
 
 		/* Basic */
 
-			body, input, select, textarea {
+/*			body, input, select, textarea {
 				font-size: 11pt;
 			}
 
 		/* Header */
 
-			.dropotron.level-0 {
+	/*		.dropotron.level-0 {
 				font-size: 1em;
 			}
 
@@ -3653,11 +3651,11 @@
 
 /* Mobile (Portrait) */
 
-	@media screen and (max-width: 480px) {
+/*	@media screen and (max-width: 480px) {
 
 		/* Basic */
 
-			html, body {
+	/*		html, body {
 				min-width: 320px;
 			}
 
@@ -3667,7 +3665,7 @@
 
 		/* Section/Article */
 
-			header.major {
+		/*	header.major {
 				padding: 0;
 			}
 
@@ -3679,7 +3677,6 @@
 
 				ul.actions li {
 					display: block;
-					padding: 1em 0 0 0;
 					text-align: center;
 				}
 
@@ -3687,7 +3684,7 @@
 						padding-top: 0;
 					}
 
-					ul.actions li > * {
+	/*				ul.actions li > * {
 						width: 100%;
 						margin: 0 !important;
 					}
