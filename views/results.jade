@@ -16,57 +16,12 @@ html.
 		<section class="banner">
 			<p><strong>Your image:</strong></p>
 			<img id="searchedImg" src="images/mainpanda.png" alt="red panda"/>
-			<form enctype="multipart/form-data">
-				<input type="file" name="upload" id="uploadButton"/>
-				<input type="button" name="newTags" value="Submit" id="submitButton"/>
-			</form>
+			<input id="temp" type="button" value="Return to Home" onclick="window.location='/';" />
 		</section>
 
 		<section class="results">
-			<div class="container">
-			<div class="row">
-				<div class="col-xs-12 col-sm-3 col-md-4">
-				<!--Get images from clarifai-->
-					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-					<p>
-						<strong>Red Panda</strong>
-						<br />
-						<a href="redpanda.com">RedPanda.com</a>
-						<br />
-						<em>$$$$$Monies</em>
-						<br />
-						Rating?
-					</p>
-				</div>
-				<div class="col-xs-12 col-sm-3 col-md-4">
-				<!--Get images from clarifai-->
-					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-					<p>
-						<strong>Red Panda</strong>
-						<br />
-						<a href="redpanda.com">RedPanda.com</a>
-						<br />
-						<em>$$$$$Monies</em>
-						<br />
-						Rating?
-					</p>
-				</div>
-				<div class="col-xs-12 col-sm-3 col-md-4">
-				<!--Get images from clarifai-->
-					<img class="icon" src="images/mainpanda.png" alt="red panda"/>
-					<p>
-						<strong>Red Panda</strong>
-						<br />
-						<a href="redpanda.com">RedPanda.com</a>
-						<br />
-						<em>$$$$$Monies</em>
-						<br />
-						Rating?
-					</p>
-					</div>
-				</div>
-
-				
+			<div class="container" id="container">
+			
 			</div>
 
 		</section>
